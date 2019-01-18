@@ -22,6 +22,20 @@
   color: #61dafb;
 }
 
+.Main-container {
+  background-color: linen;
+  padding: 20px
+}
+
+.Picker {
+  width: 200px
+}
+
+.Paper-container {
+  margin: 20px;
+  padding: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
