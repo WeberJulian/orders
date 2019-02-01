@@ -50,9 +50,9 @@ export default {
 	},
 	getOrders: async (date, updateStatus, updateOrders) => {
         var route = '/listOrdersForDelivery'
-        if(date){
-            route += "/?date=14+january"
-        }
+		route += "/?date="
+		route += date
+		console.log(route)
 		var res = await fetch(URI + route, {
 			...params,
 			method: 'GET'
