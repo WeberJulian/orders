@@ -143,9 +143,9 @@ class App extends Component {
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
           >
-            <DialogTitle id="alert-dialog-title">Order :  {this.state.order ? <p>{this.state.order.email}</p> : <p>Nothing loaded</p>}</DialogTitle>
+            <DialogTitle id="alert-dialog-title">{this.state.order ? <p>{this.state.order.email}</p> : <p>Nothing loaded</p>}</DialogTitle>
             <DialogContent>
-              
+              {this.state.order ? this.state.order.basket.map((item, index) => (<p>{item.name} {item.quantity} {item.unit}</p>)) : <div />}
             </DialogContent>
             <DialogActions>
               <Button onClick={this.handleClose.bind(this)} color="primary" autoFocus>

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #a2d6ba;
 }
 
 .App-logo {
@@ -23,7 +24,6 @@
 }
 
 .Main-container {
-  background-color: #27c475;
   padding: 20px
 }
 
