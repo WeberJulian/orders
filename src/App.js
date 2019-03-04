@@ -42,18 +42,18 @@ class App extends Component {
   handleDateChange(date) {
     this.setState({ selectedDate: date });
     this.setState({ loading : true })
-    Network.getOrders(dateFns.format(date, 'dd+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
+    Network.getOrders(dateFns.format(date, 'D+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
   }
 
   handlePickupChange(pickup) {
     this.setState({ selectedPickup: pickup.target.value });
     this.setState({ loading : true })
-    Network.getOrders(dateFns.format(this.state.selectedDate, 'dd+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
+    Network.getOrders(dateFns.format(this.state.selectedDate, 'd+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
   }
 
   handleRefresh() {
     this.setState({ loading : true })
-    Network.getOrders(dateFns.format(this.state.selectedDate, 'dd+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
+    Network.getOrders(dateFns.format(this.state.selectedDate, 'd+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
   }
 
   updateStatus(status) {
@@ -76,7 +76,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Network.getOrders(dateFns.format(this.state.selectedDate, 'dd+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
+    Network.getOrders(dateFns.format(this.state.selectedDate, "d+MMMM"), this.updateStatus.bind(this), this.updateOrders.bind(this))
   }
 
   render() {
