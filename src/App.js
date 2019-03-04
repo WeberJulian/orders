@@ -42,7 +42,7 @@ class App extends Component {
   handleDateChange(date) {
     this.setState({ selectedDate: date });
     this.setState({ loading : true })
-    Network.getOrders(dateFns.format(date, 'D+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
+    Network.getOrders(dateFns.format(date, 'd+MMMM'), this.updateStatus.bind(this), this.updateOrders.bind(this))
   }
 
   handlePickupChange(pickup) {
